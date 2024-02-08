@@ -22,13 +22,18 @@ function App() {
       <div className='squareContainer'>
         {colors.map(color => {
           return(
-            <ColorSquare key={color} color={color} answer={answer} setIsCorrect={setIsCorrect} isCorrect={isCorrect}/>
+            <ColorSquare
+              key={color}
+              color={color}
+              answer={answer}
+              setIsCorrect={setIsCorrect}
+              isCorrect={isCorrect}/>
             );
         })}
       </div>
       <h2>Click the swatch that matches: <b>{answer}</b></h2>
-      {isCorrect ? <h2>{isCorrect}</h2> : null}
-      <button onClick={reset}>Play Again</button>
+      {isCorrect ? <h2>{isCorrect}!</h2> : null}
+      <button className='button' onClick={reset}>Play Again</button>
     </div>
   );
 }

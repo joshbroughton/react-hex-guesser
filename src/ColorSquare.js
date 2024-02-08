@@ -1,6 +1,5 @@
 export default function ColorSquare({ color, answer, setIsCorrect, isCorrect }) {
   const chooseColor = () => {
-    console.log(isCorrect);
     if (isCorrect) {
       return
     }
@@ -11,6 +10,7 @@ export default function ColorSquare({ color, answer, setIsCorrect, isCorrect }) 
     <div
       className="colorSquare" style={{backgroundColor: color}}
       onClick={chooseColor}>
+        {isCorrect ? <h3>{color}</h3> : null}
     </div>
   );
 };
