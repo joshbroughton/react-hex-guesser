@@ -1,6 +1,9 @@
-export default function ColorSquare({ color, answer, setIsCorrect }) {
+export default function ColorSquare({ color, answer, setIsCorrect, isCorrect }) {
   const chooseColor = () => {
-    console.log(color);
+    console.log(isCorrect);
+    if (isCorrect) {
+      return
+    }
     color === answer ? setIsCorrect("Correct") : setIsCorrect("Incorrect")
   };
 
